@@ -3029,36 +3029,36 @@ int smblib_get_prop_die_health(struct smb_charger *chg,
 	return 0;
 }
 
-#define SDP_CURRENT_UA			3700000
+#define SDP_CURRENT_UA			4000000
 #ifdef CONFIG_MACH_XIAOMI_CLOVER
-#define CDP_CURRENT_UA			3700000
+#define CDP_CURRENT_UA			4000000
 #else
-#define CDP_CURRENT_UA			3700000
+#define CDP_CURRENT_UA			4000000
 #endif
 #ifdef CONFIG_MACH_LONGCHEER
-#define DCP_CURRENT_UA			3700000
-#define HVDCP2_CURRENT_UA		3700000
+#define DCP_CURRENT_UA			4000000
+#define HVDCP2_CURRENT_UA		4000000
 #if defined(CONFIG_MACH_XIAOMI_WHYRED) || defined(CONFIG_MACH_XIAOMI_TULIP)
-#define HVDCP_CURRENT_UA		3700000
+#define HVDCP_CURRENT_UA		4000000
 #else
-#define HVDCP_CURRENT_UA		3700000
+#define HVDCP_CURRENT_UA		4000000
 #endif
 #elif defined (CONFIG_MACH_MI)
 #define DCP_CURRENT_UA			4000000
-#define DCP_CURRENT_UA_2A		3700000
-#define HVDCP_CURRENT_UA		3750000
+#define DCP_CURRENT_UA_2A		4000000
+#define HVDCP_CURRENT_UA		3950000
 #define HVDCP2_CURRENT_UA		4000000
 #else
 #ifdef CONFIG_MACH_XIAOMI_CLOVER
-#define DCP_CURRENT_UA			3700000
+#define DCP_CURRENT_UA			4000000
 #else
-#define DCP_CURRENT_UA			3700000
+#define DCP_CURRENT_UA			4000000
 #endif
-#define HVDCP_CURRENT_UA	3700000
+#define HVDCP_CURRENT_UA	4000000
 #endif
 #define TYPEC_DEFAULT_CURRENT_UA	1200000
 #define TYPEC_MEDIUM_CURRENT_UA		1900000
-#define TYPEC_HIGH_CURRENT_UA		3700000
+#define TYPEC_HIGH_CURRENT_UA		4000000
 static int get_rp_based_dcp_current(struct smb_charger *chg, int typec_mode)
 {
 	int rp_ua;
